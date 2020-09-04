@@ -28,6 +28,18 @@
   color: #61dafb;
 }
 
+.Password-app {
+  min-height: 90vh;
+  // min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Toaster__alert {
+  color: #007bff;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +47,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#generated_password {
+  text-align: center;
 }
