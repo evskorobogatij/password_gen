@@ -33,7 +33,7 @@ function generatePass(props : PasswordProps) {
     if (props.isSymbol) {
       awailableComponents = awailableComponents.concat("isSymbol")
     }
-    console.log(awailableComponents)
+  
     for (let index = 0; index < size; index++) {
 
       let components = awailableComponents.slice()
@@ -47,7 +47,7 @@ function generatePass(props : PasswordProps) {
 
       const paramIndex = Math.floor(Math.random() * components.length);
       let usedComponent = components[paramIndex]      
-      console.log(prevType,usedComponent)
+ 
       prevType = usedComponent.slice()
 
       let tmp:string = '';
@@ -89,8 +89,7 @@ function generatePass(props : PasswordProps) {
           locSymbol = locSymbol.replace(symbol,'')
           break
       }
-
-      // console.log(data)      
+    
     }
     // navigator.clipboard.writeText('')
 

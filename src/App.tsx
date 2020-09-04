@@ -46,8 +46,7 @@ function App() {
 
   //navigator.clipboard.writeText
   useEffect(()=>{
-      console.log("Password regenerate")
-      // this.generate()
+
       setPassword(generatePass(passwordProps))
       
   },[ passwordProps])
@@ -72,9 +71,7 @@ function App() {
   }
 
   const handleStrongPassword = (event:ChangeEvent<HTMLInputElement>) => {
-    const {name, value, checked} = event.target;
-
-      console.log(name,value, checked)
+    const { checked } = event.target;
       // setStrong(checked)
       let pas = {...passwordProps};
       if(pas.isNumbers && !pas.isBigLetter && !pas.isSmLetter && !pas.isSymbol){
@@ -177,7 +174,7 @@ function App() {
                   <Form.Switch 
                     id="isNumbers"
                     name="isNumbers"
-                    label="Цыфры"
+                    label="Цифры"
                     checked={passwordProps.isNumbers}
                     onChange={handlePasswordParamChange}
                   />
