@@ -1,5 +1,5 @@
 import React, {ChangeEvent, useEffect} from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 
 
 import Container from "react-bootstrap/Container";
@@ -15,8 +15,8 @@ import FormGroup from 'react-bootstrap/esm/FormGroup';
 import toast from 'toasted-notes' 
 // import { getPriority } from 'os';
 
-import IconKey from "./images/key-solid.svg";
-import IconCopy from "./images/copy-regular.svg"
+// import IconKey from "./images/key-solid.svg";
+// import IconCopy from "./images/copy-regular.svg"
 
 import { generatePass, PasswordProps } from "./password";
 
@@ -58,7 +58,13 @@ function App() {
     // } catch (error) {
     //   console.error(error)
     // }
-    toast.notify("Пароль сгенерирован")
+    // let s:ToastPosition='';    
+
+    toast.notify("Пароль сгенерирован",{
+      position:"top-right",
+      duration:1500, 
+      type:"success"
+    })
   }, [password])
 
   const generate = () => {
@@ -67,7 +73,11 @@ function App() {
 
   const copy = () => {
     navigator.clipboard.writeText(password)
-    toast.notify("Пароль скопирован")
+    toast.notify("Пароль скопирован",{
+      position:"top-right",
+      duration:1500, 
+      type:"success"
+    })
   }
 
   const handleStrongPassword = (event:ChangeEvent<HTMLInputElement>) => {
