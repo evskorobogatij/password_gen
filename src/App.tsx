@@ -1,4 +1,5 @@
 import React, {ChangeEvent, useEffect} from 'react';
+
 // import logo from './logo.svg';
 
 
@@ -60,11 +61,14 @@ function App() {
     // }
     // let s:ToastPosition='';    
 
-    toast.notify("Пароль сгенерирован",{
-      position:"top-right",
-      duration:1500, 
-      type:"success"
-    })
+    if(password){
+      toast.notify("Пароль сгенерирован",{
+        position:"top-right",
+        duration:1500, 
+        type:"success"
+      })
+    }
+
   }, [password])
 
   const generate = () => {
